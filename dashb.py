@@ -7,7 +7,6 @@ import base64
 import io
 
 
-@st.cache
 def indice():
     """funcao para buscar o arquivo index.csv no github, criar um dataframe e retornar uma lista com os dados
     da coluna 'ficha' que sao os nomes dos arquivos que serao usados adiante"""
@@ -18,7 +17,6 @@ def indice():
     return list(df['ficha'])
 
 
-@st.cache
 def git_busca(nome):
     """funcao para buscar o arquivo csv (nome) no github e retorna um dataframe"""
 
